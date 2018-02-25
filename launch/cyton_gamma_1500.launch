@@ -1,0 +1,9 @@
+<launch>
+  <arg name="arm_prefix" value="" />
+  <arg name="arm_suffix" value="_controller" />
+
+  <include file="spawner.launch.xml">
+    <arg name="arm_prefix" value="$(arg arm_prefix)"/>
+    <arg name="arm_suffix" value="$(arg arm_suffix)"/>
+  </include>
+</launch>

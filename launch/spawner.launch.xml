@@ -1,0 +1,26 @@
+<launch>
+  <arg name="arm_prefix" />
+  <arg name="arm_suffix" />
+  <arg name="port" />
+  <include file="$(find cyton_gamma_1500_controller)/launch/controllers.launch.xml">
+    <arg name="prefix" value="$(arg arm_prefix)" />
+    <arg name="suffix" value="$(arg arm_suffix)" />
+  </include>
+
+  <node name="$(anon gamma_controller-1)" pkg="dynamixel_controllers" type="controller_spawner.py" 
+        args="--manager=dynamixel_controller_manager --port $(arg port) $(arg arm_prefix)shoulder_roll$(arg arm_suffix)" output="screen"/>
+  <node name="$(anon gamma_controller-2)" pkg="dynamixel_controllers" type="controller_spawner.py" 
+        args="--manager=dynamixel_controller_manager --port $(arg port) $(arg arm_prefix)shoulder_pitch$(arg arm_suffix)" output="screen"/>
+  <node name="$(anon gamma_controller-3)" pkg="dynamixel_controllers" type="controller_spawner.py" 
+        args="--manager=dynamixel_controller_manager --port $(arg port) $(arg arm_prefix)shoulder_yaw$(arg arm_suffix)" output="screen"/>
+  <node name="$(anon gamma_controller-4)" pkg="dynamixel_controllers" type="controller_spawner.py" 
+        args="--manager=dynamixel_controller_manager --port $(arg port) $(arg arm_prefix)elbow_pitch$(arg arm_suffix)" output="screen"/>
+  <node name="$(anon gamma_controller-5)" pkg="dynamixel_controllers" type="controller_spawner.py" 
+        args="--manager=dynamixel_controller_manager --port $(arg port) $(arg arm_prefix)elbow_yaw$(arg arm_suffix)" output="screen"/>
+  <node name="$(anon gamma_controller-6)" pkg="dynamixel_controllers" type="controller_spawner.py" 
+        args="--manager=dynamixel_controller_manager --port $(arg port) $(arg arm_prefix)wrist_pitch$(arg arm_suffix)" output="screen"/>
+  <node name="$(anon gamma_controller-7)" pkg="dynamixel_controllers" type="controller_spawner.py" 
+        args="--manager=dynamixel_controller_manager --port $(arg port) $(arg arm_prefix)wrist_roll$(arg arm_suffix)" output="screen"/>
+  <node name="$(anon gamma_controller-8)" pkg="dynamixel_controllers" type="controller_spawner.py" 
+        args="--manager=dynamixel_controller_manager --port $(arg port) $(arg arm_prefix)gripper$(arg arm_suffix)" output="screen"/>
+</launch>

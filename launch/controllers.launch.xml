@@ -1,0 +1,84 @@
+<launch>
+  <arg name="prefix" />
+  <arg name="suffix" />
+
+  <param name="$(arg prefix)shoulder_roll$(arg suffix)/controller/package" value="dynamixel_controllers"/>
+  <param name="$(arg prefix)shoulder_roll$(arg suffix)/controller/module" value="joint_position_controller"/>
+  <param name="$(arg prefix)shoulder_roll$(arg suffix)/controller/type" value="JointPositionController"/>
+  <param name="$(arg prefix)shoulder_roll$(arg suffix)/joint_name" value="$(arg prefix)shoulder_roll"/>
+  <param name="$(arg prefix)shoulder_roll$(arg suffix)/joint_speed" value="0.1"/>
+  <param name="$(arg prefix)shoulder_roll$(arg suffix)/motor/id" value="0"/>
+  <param name="$(arg prefix)shoulder_roll$(arg suffix)/motor/init" value="2047"/>
+  <param name="$(arg prefix)shoulder_roll$(arg suffix)/motor/min" value="0"/>
+  <param name="$(arg prefix)shoulder_roll$(arg suffix)/motor/max" value="4095"/>
+
+  <param name="$(arg prefix)shoulder_pitch$(arg suffix)/controller/package" value="dynamixel_controllers"/>
+  <param name="$(arg prefix)shoulder_pitch$(arg suffix)/controller/module" value="joint_position_controller"/>
+  <param name="$(arg prefix)shoulder_pitch$(arg suffix)/controller/type" value="JointPositionController"/>
+  <param name="$(arg prefix)shoulder_pitch$(arg suffix)/joint_name" value="$(arg prefix)shoulder_pitch"/>
+  <param name="$(arg prefix)shoulder_pitch$(arg suffix)/joint_speed" value="0.1"/>
+  <param name="$(arg prefix)shoulder_pitch$(arg suffix)/motor/id" value="1"/>
+  <param name="$(arg prefix)shoulder_pitch$(arg suffix)/motor/init" value="2050"/>
+  <param name="$(arg prefix)shoulder_pitch$(arg suffix)/motor/min" value="855"/>
+  <param name="$(arg prefix)shoulder_pitch$(arg suffix)/motor/max" value="3245"/>
+
+  <param name="$(arg prefix)shoulder_yaw$(arg suffix)/controller/package" value="dynamixel_controllers"/>
+  <param name="$(arg prefix)shoulder_yaw$(arg suffix)/controller/module" value="joint_position_controller"/>
+  <param name="$(arg prefix)shoulder_yaw$(arg suffix)/controller/type" value="JointPositionController"/>
+  <param name="$(arg prefix)shoulder_yaw$(arg suffix)/joint_name" value="$(arg prefix)shoulder_yaw"/>
+  <param name="$(arg prefix)shoulder_yaw$(arg suffix)/joint_speed" value="0.1"/>
+  <param name="$(arg prefix)shoulder_yaw$(arg suffix)/motor/id" value="2"/>
+  <param name="$(arg prefix)shoulder_yaw$(arg suffix)/motor/init" value="2050"/>
+  <param name="$(arg prefix)shoulder_yaw$(arg suffix)/motor/min" value="855"/>
+  <param name="$(arg prefix)shoulder_yaw$(arg suffix)/motor/max" value="3245"/>
+
+  <param name="$(arg prefix)elbow_pitch$(arg suffix)/controller/package" value="dynamixel_controllers"/>
+  <param name="$(arg prefix)elbow_pitch$(arg suffix)/controller/module" value="joint_position_controller"/>
+  <param name="$(arg prefix)elbow_pitch$(arg suffix)/controller/type" value="JointPositionController"/>
+  <param name="$(arg prefix)elbow_pitch$(arg suffix)/joint_name" value="$(arg prefix)elbow_pitch"/>
+  <param name="$(arg prefix)elbow_pitch$(arg suffix)/joint_speed" value="0.1"/>
+  <param name="$(arg prefix)elbow_pitch$(arg suffix)/motor/id" value="3"/>
+  <param name="$(arg prefix)elbow_pitch$(arg suffix)/motor/init" value="2050"/>
+  <param name="$(arg prefix)elbow_pitch$(arg suffix)/motor/min" value="855"/>
+  <param name="$(arg prefix)elbow_pitch$(arg suffix)/motor/max" value="3245"/>
+
+  <param name="$(arg prefix)elbow_yaw$(arg suffix)/controller/package" value="dynamixel_controllers"/>
+  <param name="$(arg prefix)elbow_yaw$(arg suffix)/controller/module" value="joint_position_controller"/>
+  <param name="$(arg prefix)elbow_yaw$(arg suffix)/controller/type" value="JointPositionController"/>
+  <param name="$(arg prefix)elbow_yaw$(arg suffix)/joint_name" value="$(arg prefix)elbow_yaw"/>
+  <param name="$(arg prefix)elbow_yaw$(arg suffix)/joint_speed" value="0.1"/>
+  <param name="$(arg prefix)elbow_yaw$(arg suffix)/motor/id" value="4"/>
+  <param name="$(arg prefix)elbow_yaw$(arg suffix)/motor/init" value="2047"/>
+  <param name="$(arg prefix)elbow_yaw$(arg suffix)/motor/min" value="0"/>
+  <param name="$(arg prefix)elbow_yaw$(arg suffix)/motor/max" value="4095"/>
+
+  <param name="$(arg prefix)wrist_pitch$(arg suffix)/controller/package" value="dynamixel_controllers"/>
+  <param name="$(arg prefix)wrist_pitch$(arg suffix)/controller/module" value="joint_position_controller"/>
+  <param name="$(arg prefix)wrist_pitch$(arg suffix)/controller/type" value="JointPositionController"/>
+  <param name="$(arg prefix)wrist_pitch$(arg suffix)/joint_name" value="$(arg prefix)wrist_pitch"/>
+  <param name="$(arg prefix)wrist_pitch$(arg suffix)/joint_speed" value="0.1"/>
+  <param name="$(arg prefix)wrist_pitch$(arg suffix)/motor/id" value="5"/>
+  <param name="$(arg prefix)wrist_pitch$(arg suffix)/motor/init" value="2050"/>
+  <param name="$(arg prefix)wrist_pitch$(arg suffix)/motor/min" value="855"/>
+  <param name="$(arg prefix)wrist_pitch$(arg suffix)/motor/max" value="3245"/>
+
+  <param name="$(arg prefix)wrist_roll$(arg suffix)/controller/package" value="dynamixel_controllers"/>
+  <param name="$(arg prefix)wrist_roll$(arg suffix)/controller/module" value="joint_position_controller"/>
+  <param name="$(arg prefix)wrist_roll$(arg suffix)/controller/type" value="JointPositionController"/>
+  <param name="$(arg prefix)wrist_roll$(arg suffix)/joint_name" value="$(arg prefix)wrist_roll"/>
+  <param name="$(arg prefix)wrist_roll$(arg suffix)/joint_speed" value="0.1"/>
+  <param name="$(arg prefix)wrist_roll$(arg suffix)/motor/id" value="6"/>
+  <param name="$(arg prefix)wrist_roll$(arg suffix)/motor/init" value="2047"/>
+  <param name="$(arg prefix)wrist_roll$(arg suffix)/motor/min" value="0"/>
+  <param name="$(arg prefix)wrist_roll$(arg suffix)/motor/max" value="4095"/>
+
+  <param name="$(arg prefix)gripper$(arg suffix)/controller/package" value="dynamixel_controllers"/>
+  <param name="$(arg prefix)gripper$(arg suffix)/controller/module" value="joint_position_controller"/>
+  <param name="$(arg prefix)gripper$(arg suffix)/controller/type" value="JointPositionController"/>
+  <param name="$(arg prefix)gripper$(arg suffix)/joint_name" value="$(arg prefix)gripper"/>
+  <param name="$(arg prefix)gripper$(arg suffix)/joint_speed" value="0.1"/>
+  <param name="$(arg prefix)gripper$(arg suffix)/motor/id" value="7"/>
+  <param name="$(arg prefix)gripper$(arg suffix)/motor/init" value="2375"/>
+  <param name="$(arg prefix)gripper$(arg suffix)/motor/min" value="1578"/>
+  <param name="$(arg prefix)gripper$(arg suffix)/motor/max" value="3172"/>
+</launch>

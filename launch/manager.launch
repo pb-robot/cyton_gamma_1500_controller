@@ -1,0 +1,12 @@
+<launch>
+    <arg name="name" default="dxl_tty0" />
+    <arg name="port" default="/dev/ttyUSB0" />
+    <node name="$(anon dynamixel_manager)" pkg="dynamixel_controllers" type="controller_manager.py" required="true" output="screen">
+        <param name="namespace" value="dynamixel_controller_manager" />
+        <param name="serial_ports/$(arg name)/port_name" value="$(arg port)" />
+        <param name="serial_ports/$(arg name)/baud_rate" value="1000000" /> <!-- 1000000 -->
+        <param name="serial_ports/$(arg name)/min_motor_id" value="0" />
+        <param name="serial_ports/$(arg name)/max_motor_id" value="7" />
+        <param name="serial_ports/$(arg name)/update_rate" value="10" />
+    </node>
+</launch>
